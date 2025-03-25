@@ -31,30 +31,12 @@ WATER_LEVEL_FORECAST/
 └── run.bat                              # Windows環境でパイプラインを実行するバッチスクリプト
 
  </pre>
+![Editor _ Mermaid Chart-2025-03-25-130831](https://github.com/user-attachments/assets/6d3179f4-ebcf-4a4c-bc3a-ae99befe7afe)
+
+
+ 
 
 ---
-graph TD
-  subgraph ユーザー環境
-    CLI[PowerShell / run.bat]
-    API[Flask API (開発予定)]
-  end
-
-  subgraph コンテナ
-    Docker[Docker Container]
-    Docker --> MainScript[main.py / argparse]
-    MainScript -->|--process japanese| JapaneseDataProcessor
-    MainScript -->|--process filter| DataFilter
-    MainScript -->|--process clean| DataCleaner
-    MainScript -->|--process anomaly| AnomalyHandler
-    MainScript -->|--process ml| MLDataPreparer
-    MainScript -->|--process dynamic_features| FeatureLibrary
-    MainScript -->|--process train| LightGBMTrainer
-    MainScript -->|--process predict| LightGBMPredictor
-  end
-
-  CLI --> Docker
-  API --> Docker
-
 
 ## 🛠 環境構築とインストール手順
 
