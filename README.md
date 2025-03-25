@@ -6,7 +6,6 @@
 
 ## 📂 プロジェクト構成
 <pre>
-  ```text
 WATER_LEVEL_FORECAST/
 │── data/                           # データフォルダ
 │   ├── outputs/                     # 予測結果の出力フォルダ
