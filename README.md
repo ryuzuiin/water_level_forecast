@@ -33,6 +33,28 @@ WATER_LEVEL_FORECAST/
  </pre>
 
 ---
+graph TD
+  subgraph ユーザー環境
+    CLI[PowerShell / run.bat]
+    API[Flask API (開発予定)]
+  end
+
+  subgraph コンテナ
+    Docker[Docker Container]
+    Docker --> MainScript[main.py / argparse]
+    MainScript -->|--process japanese| JapaneseDataProcessor
+    MainScript -->|--process filter| DataFilter
+    MainScript -->|--process clean| DataCleaner
+    MainScript -->|--process anomaly| AnomalyHandler
+    MainScript -->|--process ml| MLDataPreparer
+    MainScript -->|--process dynamic_features| FeatureLibrary
+    MainScript -->|--process train| LightGBMTrainer
+    MainScript -->|--process predict| LightGBMPredictor
+  end
+
+  CLI --> Docker
+  API --> Docker
+
 
 ## 🛠 環境構築とインストール手順
 
