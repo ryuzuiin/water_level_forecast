@@ -73,20 +73,25 @@ pip install -r requirements.txt
 
 ```bash
 docker build -t water-level-forecast .
+```
 
 ### ▶️ 実行（PowerShell例：Gドライブのマウント）
 
+```bash
 docker run --rm ^
   -v "G:/マイドライブ/農林水産省/データファイル:/app/G/マイドライブ/農林水産省/データファイル" ^
   water-level-forecast ^
   python main.py --process train --target "Headworks_A" --with_rainfall
+```
 
 ### 💡 すべての処理を一括実行したい場合
 
+```bash
 docker run --rm ^
   -v "G:/マイドライブ/農林水産省/データファイル:/app/G/マイドライブ/農林水産省/データファイル" ^
   water-level-forecast ^
   python main.py --process all --target "Headworks_A" --with_rainfall
+```
 
 ---
 
