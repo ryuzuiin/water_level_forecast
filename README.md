@@ -82,7 +82,7 @@ docker build -t water-level-forecast .
 
 ```bash
 docker run --rm ^
-  -v "G:/マイドライブ/農林水産省/データファイル:/app/G/マイドライブ/農林水産省/データファイル" ^
+  -v "path/to/データファイル:/app/path/to/データファイル" ^
   water-level-forecast ^
   python main.py --process train --target "Headworks_A" --with_rainfall
 ```
@@ -91,7 +91,7 @@ docker run --rm ^
 
 ```bash
 docker run --rm ^
-  -v "G:/マイドライブ/農林水産省/データファイル:/app/G/マイドライブ/農林水産省/データファイル" ^
+  -v "path/to/データファイル:/app/path/to/データファイル" ^
   water-level-forecast ^
   python main.py --process all --target "Headworks_A" --with_rainfall
 ```
