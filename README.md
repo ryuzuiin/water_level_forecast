@@ -5,7 +5,7 @@
 ---
 
 ## 📂 プロジェクト構成
-<pre> ```
+<pre> 
 WATER_LEVEL_FORECAST/
 │── data/                                # データフォルダ
 │   ├── outputs/                         # 予測結果の出力フォルダ
@@ -28,7 +28,7 @@ WATER_LEVEL_FORECAST/
 │── README.md                            # プロジェクトの説明ドキュメント
 └── run.bat                              # Windows環境でパイプラインを実行するバッチスクリプト
 
-  ``` </pre>
+ </pre>
 
 ---
 
