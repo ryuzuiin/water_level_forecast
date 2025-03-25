@@ -5,7 +5,30 @@
 ---
 
 ## 📂 プロジェクト構成
-<pre> ``` WATER_LEVEL_FORECAST/ │── data/ # データフォルダ │ ├── outputs/ # 予測結果の出力フォルダ │ ├── test/ # テストデータセット │ └── データファイル/ # 入力データファイル │── models/ # 学習済みモデルを保存するフォルダ │── src/ # メインソースコード │ └── water_level_forecast/ # 水位予測モジュール │ ├── anomaly_handler.py # 異常値の検出と補正 │ ├── data_cleaning.py # 生データのクリーニング（欠損値処理、ノイズ除去など） │ ├── data_filter.py # ルールに基づいたデータのフィルタリング │ ├── feature_library.py # 特徴量の作成 │ ├── japanese_data_processor.py # 水位データファイルの処理 │ ├── lightgbm_predictor.py # 学習済みLightGBMモデルによる予測 │ ├── ml_data_preparer.py # 機械学習用の入力データ準備 │ └── train_lightgbm.py # LightGBMモデルの学習 │── demo.py # 動作確認用のデモスクリプト │── run_demo.ipynb # Jupyter Notebookによる予測結果確認用デモ │── requirements.txt # Pythonの依存パッケージリスト │── README.md # プロジェクトの説明ドキュメント └── run.bat # Windows環境でパイプラインを実行するバッチスクリプト ``` </pre>
+<pre> ```
+WATER_LEVEL_FORECAST/
+│── data/                                # データフォルダ
+│   ├── outputs/                         # 予測結果の出力フォルダ
+│   ├── test/                            # テストデータセット
+│   └── データファイル/                     # 入力データファイル
+│── models/                              # 学習済みモデルを保存するフォルダ
+│── src/                                 # メインソースコード
+│   └── water_level_forecast/            # 水位予測モジュール
+│       ├── anomaly_handler.py           # 異常値の検出と補正
+│       ├── data_cleaning.py             # 生データのクリーニング（欠損値処理、ノイズ除去など）
+│       ├── data_filter.py               # ルールに基づいたデータのフィルタリング
+│       ├── feature_library.py           # 特徴量の作成
+│       ├── japanese_data_processor.py   # 水位データファイルの処理
+│       ├── lightgbm_predictor.py        # 学習済みLightGBMモデルによる予測
+│       ├── ml_data_preparer.py          # 機械学習用の入力データ準備
+│       └── train_lightgbm.py            # LightGBMモデルの学習
+│── demo.py                              # 動作確認用のデモスクリプト
+│── run_demo.ipynb                       # Jupyter Notebookによる予測結果確認用デモ
+│── requirements.txt                     # Pythonの依存パッケージリスト
+│── README.md                            # プロジェクトの説明ドキュメント
+└── run.bat                              # Windows環境でパイプラインを実行するバッチスクリプト
+
+  ``` </pre>
 
 ---
 
