@@ -26,6 +26,7 @@ WATER_LEVEL_FORECAST/
 │── run_demo.ipynb                       # Jupyter Notebookによる予測結果確認用デモ
 │── requirements.txt                     # Pythonの依存パッケージリスト
 │── README.md                            # プロジェクトの説明ドキュメント
+│── Dockerfile                           # コンテナ化用のDocker設定ファイル
 └── run.bat                              # Windows環境でパイプラインを実行するバッチスクリプト
 
  </pre>
