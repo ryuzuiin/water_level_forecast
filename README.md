@@ -58,6 +58,36 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+
+## 🐳 Dockerでの実行方法（推奨）
+
+本プロジェクトは Docker コンテナとしても実行可能です。  
+依存関係や環境構築を省略し、すぐに再現性のある実行ができます。
+
+### 🔧 事前準備
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストールしてください
+- Gドライブなどのアクセス権限を Docker 側で許可しておくこと（Docker Desktop の設定画面より）
+
+### 🧱 Docker イメージのビルド
+
+```bash
+docker build -t water-level-forecast .
+
+### ▶️ 実行（PowerShell例：Gドライブのマウント）
+
+docker run --rm ^
+  -v "G:/マイドライブ/農林水産省/データファイル:/app/G/マイドライブ/農林水産省/データファイル" ^
+  water-level-forecast ^
+  python main.py --process train --target "Headworks_A" --with_rainfall
+
+### 💡 すべての処理を一括実行したい場合
+
+docker run --rm ^
+  -v "G:/マイドライブ/農林水産省/データファイル:/app/G/マイドライブ/農林水産省/データファイル" ^
+  water-level-forecast ^
+  python main.py --process all --target "Headworks_A" --with_rainfall
+
 ---
 
 ## 🚀 コードの実行方法
