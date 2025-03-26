@@ -51,7 +51,7 @@ class LightGBMTrainer:
 
     def get_train_params(self):
         params_dict = {
-            "別所頭首工": {
+            "A頭首工": {
                 "metric": "l1",
                 "num_leaves": 119,
                 "max_depth": 9,
@@ -64,7 +64,7 @@ class LightGBMTrainer:
                 "lambda_l2": 1.893778442228652e-05,
                 "verbose": -1
             },
-            "蒲生頭首工": {
+            "B頭首工": {
                 "metric": "l1",
                 "num_leaves": 103,
                 "max_depth": 6,
@@ -77,7 +77,7 @@ class LightGBMTrainer:
                 "lambda_l2": 8.94452604681556,
                 "verbose": -1
             },
-            "蓮花寺頭首工": {
+            "C頭首工": {
                 "metric": "l1",
                 "num_leaves": 80,
                 "max_depth": 10,
@@ -90,7 +90,7 @@ class LightGBMTrainer:
                 "lambda_l2": 4.4234662429240676e-05,
                 "verbose": -1
             },
-            "名神日野川頭首工": { 
+            "D頭首工": { 
                 "metric": "l1",
                 "num_leaves": 43,
                 "max_depth": 10,
