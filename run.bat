@@ -80,7 +80,7 @@ if "%DOCKER_MODE%"=="true" (
     )
     echo 🐳 Executing via Docker...
     docker run --rm ^
-        -v "G:/マイドライブ/農林水産省/データファイル:/app/G/マイドライブ/農林水産省/データファイル" ^
+        -v "path/to/データファイル:/app/path/to/データファイル" ^
         water-level-forecast ^
         python main.py --process %PROCESS% %TARGET% %WITH_RAINFALL% %CONFIG_FILE%
     goto end
